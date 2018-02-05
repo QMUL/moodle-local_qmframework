@@ -244,23 +244,23 @@ function local_qmframework_get_connection_settings() {
         $settings = [];
         if (empty($config['local_qmframework_host'])) {
             $missinghost = get_string('missing_hostsetting', 'local_qmframework');
-#            throw new \invalid_parameter_exception($missinghost);
+            throw new \invalid_parameter_exception($missinghost);
         }
         if (empty($config['local_qmframework_institution'])) {
             $missinginstitution = get_string('missing_institutionsetting', 'local_qmframework');
-#            throw new \invalid_parameter_exception($missinginstitution);
+            throw new \invalid_parameter_exception($missinginstitution);
         }
         if (empty($config['local_qmframework_authinstitution'])) {
             $missingauthinstitution = get_string('missing_authinstitutionsetting', 'local_qmframework');
-#            throw new \invalid_parameter_exception($missingauthinstitution);
+            throw new \invalid_parameter_exception($missingauthinstitution);
         }
         if (empty($config['local_qmframework_wstoken'])) {
             $missingtoken = get_string('missing_tokensetting', 'local_qmframework');
-#            throw new \invalid_parameter_exception($missingtoken);
+            throw new \invalid_parameter_exception($missingtoken);
         }
         if (empty($config['local_qmframework_authwstoken'])) {
             $missingauthtoken = get_string('missing_authtokensetting', 'local_qmframework');
-#            throw new \invalid_parameter_exception($missingauthtoken);
+            throw new \invalid_parameter_exception($missingauthtoken);
         }
         $settings['host'] = $config['local_qmframework_host'];
         $settings['institution'] = $config['local_qmframework_institution'];

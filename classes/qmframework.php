@@ -43,8 +43,7 @@ class qmframework {
     public static function get_dashboardlink() {
         global $DB, $USER;
         $settings = local_qmframework_get_connection_settings();
-        if($settings['host']) $host     = local_qmframework_mahara_mnet_host($settings['host']);
-        else $host = false;
+        $host     = local_qmframework_mahara_mnet_host($settings['host']);
 
         $record = $DB->get_record_sql(
             'SELECT *
@@ -104,8 +103,7 @@ class qmframework {
     public static function get_adviseeslinks() {
         global $DB, $USER;
         $settings = local_qmframework_get_connection_settings();
-        if($settings['host']) $host     = local_qmframework_mahara_mnet_host($settings['host']);
-        else $host = false;
+        $host     = local_qmframework_mahara_mnet_host($settings['host']);
 
         $records = $DB->get_records_sql(
             'SELECT l.link, g.name
